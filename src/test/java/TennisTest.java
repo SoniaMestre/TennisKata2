@@ -10,4 +10,10 @@ public class TennisTest {
         game.wonPoint("player1");
         assertThat(game.getScore(), equalTo("15-0"));
     }
+    @Test
+    void secondPlayerWonPoint() {
+        TennisGame game = new TennisGame();
+        game.wonPoint("player2");
+        assertThat(game.getScore(), equalTo("0-15"));
+    }
 }
